@@ -22,8 +22,8 @@ jobs:
         extensions: mbstring, dom, zip, phalcon4, pgsql
         coverage: xdebug
 
-    - name: Install dependencies
-      run: composer install
+    - name: Install Composer dependencies
+    run: composer install
 
     - name: Checkout
       uses: actions/checkout@v3
