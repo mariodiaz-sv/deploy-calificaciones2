@@ -1,0 +1,21 @@
+{
+  "version": 2, 
+  
+  "functions": {
+      "api/index.php": {
+        "runtime": "vercel-php@0.6.0"
+      }
+    },
+  "routes": [
+      { "src": "/(.*)", "dest": "/api/index.php" },
+      { "src": "/frontend/index.php", "dest": "/frontend/index.php" }
+    ],
+  "env": {
+        "APP_NAME": "deploy-calificaciones",
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://deploy-calificaciones.vercel.app"
+    }
+}
+
+  
