@@ -6,7 +6,11 @@ $calificationsJSON = '[
 ]';
 
 // Instantiate the class responsible for implementing a micro application
+
+
+
 use \Phalcon\Mvc\Micro;
+require_once __DIR__ . '/../vendor/autoload.php';
 $app = new Micro();
 
 // TODO Define routes
