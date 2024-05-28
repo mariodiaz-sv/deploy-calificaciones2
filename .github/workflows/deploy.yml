@@ -6,18 +6,21 @@ on:
       - master
 
 jobs:
-  deploy:
+  phalcon:
+    name: Phalcon (PHP ${{ matrix.php-versions }})
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    # Docs: https://github.com/shivammathur/setup-php
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: 8.0
-        extensions: phalcon
+        php-version: ${{ matrix.php-versions }}
+        extensions: mbstring, dom, zip, phalcon4, pgsql
+        coverage: xdebug
 
     - name: Install dependencies
       run: composer install
