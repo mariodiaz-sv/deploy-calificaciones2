@@ -1,19 +1,22 @@
 {
-
     "name": "my/phalcon-app",
-  
     "description": "My Phalcon PHP application",
-  
     "require": {
-  
       "phalcon/framework": "^4.1"
-  
+    },
+    "scripts": {
+      "start": "php public/index.php"
     },
   
-    "scripts": {
-  
-      "start": "php public/index.php"
-  
+    "extra": {
+      "phalcon-devtools": {
+        "config": {
+          "phalcon": {
+            "extensions": [
+              "phalcon"
+            ]
+          }
+        }
+      }
     }
-  
-  }
+}
